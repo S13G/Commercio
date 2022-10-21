@@ -48,6 +48,7 @@ LOCAL_APPS = [
     'shop',
     'cart',
     'orders',
+    'payment',
 ]
 
 # Application definition

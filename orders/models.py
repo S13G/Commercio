@@ -7,6 +7,7 @@ from shop.models import Product
 
 
 class Order(models.Model):
+    braintree_id = models.CharField(max_length=150, blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
