@@ -4,6 +4,7 @@ from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Commercio.settings')
+
 app = Celery('Commercio')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
