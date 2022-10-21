@@ -1,6 +1,6 @@
 ### db_index
 
-####  
+####    
 
 I would say you should use db_index=True when you have a field that is unique for faster lookups.
 
@@ -11,6 +11,7 @@ that column will give you a much more desirable time of query than say using the
 ### index_together
 
 #### In the Meta class of the Product model, you use the index_together meta option
+
 to specify an index for the id and slug fields together. You define this index because
 you plan to query products by both id and slug. Both fields are indexed together
 to improve performance for queries that utilize the two fields.
