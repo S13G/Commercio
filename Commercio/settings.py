@@ -130,16 +130,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Braintree settings
-BRAINTREE_MERCHANT_ID = config('MERCHANT_ID')  # Merchant ID
-BRAINTREE_PUBLIC_KEY = config('PUBLIC_KEY')  # Public Key
-BRAINTREE_PRIVATE_KEY = config('PRIVATE_KEY')  # Private key
-
-import braintree
-
-BRAINTREE_CONF = braintree.Configuration(
-    braintree.Environment.Sandbox,
-    BRAINTREE_MERCHANT_ID,
-    BRAINTREE_PUBLIC_KEY,
-    BRAINTREE_PRIVATE_KEY
-)
+# STRIPE CONFIG
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY')
+STRIPE_ENDPOINT_SECRET = config('STRIPE_ENDPOINT_SECRET')
